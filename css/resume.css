@@ -3,6 +3,10 @@ body {
   color: #868e96;
 }
 
+ .stop-scrolling {
+   height: 100%;
+   overflow: hidden;
+ }
 @media (min-width: 992px) {
   body {
     padding-top: 0;
