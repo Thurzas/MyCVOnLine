@@ -10,7 +10,6 @@ var s;
 var gridWorld;
 var Apple;
 var g;
-var LastKey="";
 var FPS=10;
 var scoreMargin=1;
 var scoreGridX=(BOX+scoreMargin/5)*9;
@@ -21,6 +20,72 @@ var TetrisGrid;
 var vp = new viewport();
 var Pressed=false;
 var isScreenFocused=false;
+
+
+function move(button){
+  switch(button.id)
+  {
+    case "LEFT":
+      if(s.LastKey!="RIGHT")
+      {
+        if(!s.IsMoving===true)
+        s.IsMoving=true;
+
+        if(Pressed===false)
+        {
+          s.LEFT();
+          Pressed=true;
+          s.LastKey="LEFT";
+        }
+      }
+    break;
+
+    case "UP":
+      if(s.LastKey!="DOWN")
+      {
+        if(!s.IsMoving===true)
+        s.IsMoving=true;
+
+        if(Pressed===false)
+        {
+          s.UP();
+          Pressed=true;
+          s.LastKey="UP";
+        }
+      }
+    break;
+
+    case "RIGHT":
+      if(s.LastKey!="LEFT")
+      {
+        if(!s.IsMoving===true)
+        s.IsMoving=true;
+
+        if(Pressed===false)
+        {
+          s.RIGHT();
+          Pressed=true;
+          s.LastKey="RIGHT";
+        }
+      }
+    break;
+
+    case "DOWN":
+      if(s.LastKey!="UP")
+      {
+        if(!s.IsMoving===true)
+        s.IsMoving=true;
+
+        if(Pressed===false)
+        {
+          s.DOWN();
+          Pressed=true;
+          s.LastKey="DOWN";
+        }
+      }
+    break;
+  }
+};
 
 function viewport(){
   this.viewport=new Array(2);
@@ -50,7 +115,6 @@ function viewport(){
 }
 
 var keyPressed=function(evt){
-  var res=false;
   switch(evt.keyCode)
   {
     case 80:
@@ -65,7 +129,7 @@ var keyPressed=function(evt){
     break;
 
     case 37:
-      if(LastKey!="RIGHT")
+      if(s.LastKey!="RIGHT")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -74,7 +138,7 @@ var keyPressed=function(evt){
         {
           s.LEFT();
           Pressed=true;
-          LastKey="LEFT";
+          s.LastKey="LEFT";
         }
       }
 
@@ -82,7 +146,7 @@ var keyPressed=function(evt){
     break;
 
     case 38:
-      if(LastKey!="DOWN")
+      if(s.LastKey!="DOWN")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -91,7 +155,7 @@ var keyPressed=function(evt){
         {
           s.UP();
           Pressed=true;
-          LastKey="UP";
+          s.LastKey="UP";
         }
       }
 
@@ -102,7 +166,7 @@ var keyPressed=function(evt){
     break;
 
     case 39:
-      if(LastKey!="LEFT")
+      if(s.LastKey!="LEFT")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -111,12 +175,12 @@ var keyPressed=function(evt){
         {
           s.RIGHT();
           Pressed=true;
-          LastKey="RIGHT";
+          s.LastKey="RIGHT";
         }
       }
     break;
     case 40:
-      if(LastKey!="UP")
+      if(s.LastKey!="UP")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -125,12 +189,12 @@ var keyPressed=function(evt){
         {
           s.DOWN();
           Pressed=true;
-          LastKey="DOWN";
+          s.LastKey="DOWN";
         }
       }
     break;
     case 100:
-      if(LastKey!="RIGHT")
+      if(s.LastKey!="RIGHT")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -139,14 +203,14 @@ var keyPressed=function(evt){
         {
           s.LEFT();
           Pressed=true;
-          LastKey="LEFT";
+          s.LastKey="LEFT";
         }
     }
 
     break;
 
     case 104:
-      if(LastKey!="DOWN")
+      if(s.LastKey!="DOWN")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -155,13 +219,13 @@ var keyPressed=function(evt){
         {
           s.UP();
           Pressed=true;
-          LastKey="UP";
+          s.LastKey="UP";
         }
       }
     break;
 
     case 102:
-      if(LastKey!="LEFT")
+      if(s.LastKey!="LEFT")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -170,13 +234,13 @@ var keyPressed=function(evt){
         {
           s.RIGHT();
           Pressed=true;
-          LastKey="RIGHT";
+          s.LastKey="RIGHT";
         }
       }
     break;
 
     case 98:
-      if(LastKey!="UP")
+      if(s.LastKey!="UP")
       {
         if(!s.IsMoving===true)
         s.IsMoving=true;
@@ -185,12 +249,11 @@ var keyPressed=function(evt){
         {
           s.DOWN();
           Pressed=true;
-          LastKey="DOWN";
+          s.LastKey="DOWN";
         }
     }
     break;
   }
-  return res;
 };
 
 function touchScreen(direction){
@@ -284,7 +347,6 @@ function Game(){
         hitbox[1]=convert(Gmenu,gridWorld,hitbox[1].x,hitbox[1].y,false);
         if((s.x>=hitbox[0].x && s.x<=hitbox[1].x) && (s.y>=hitbox[0].y && s.y <=hitbox[1].y))
         {
-          console.log(this.GameCode);
           this.GameCode="Snake";
         }
         console.log("Pressed : "+Pressed);

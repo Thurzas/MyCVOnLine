@@ -32,7 +32,6 @@ function Snake(X,Y,move){
 				this.y=gridWorld.WorldY.length-1;
 		}
 	}
-
 	this.UP = function(){
 		this.direction(0,-1);
 		this.LastKey="LEFT";
