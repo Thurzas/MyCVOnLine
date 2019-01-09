@@ -369,7 +369,7 @@ function Game(){
         if(this.SoundEnabled)
         this.hit.play();
         s = new Snake(getRandomInt(0,gridWorld.WorldX.length-1),getRandomInt(0,gridWorld.WorldY.length-1),true);
-        g.Score=0;
+        this.Score=0;
       }
     }
     if(this.GameCode==="Tetris")

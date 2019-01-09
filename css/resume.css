@@ -1,6 +1,5 @@
 body {
     padding-top: 54px;
-  color: #868e96;
 }
 
  .stop-scrolling {
@@ -12,6 +11,7 @@ body {
  {
    visibility:hidden;
  }
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
@@ -59,7 +59,7 @@ p.lead {
   height: 3.5rem;
   width: 3.5rem;
   background-color: #495057;
-  color: #fff !important;
+  color: #ffff !important;
   border-radius: 100%;
   text-align: center;
   font-size: 1.5rem;
@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: #147e00;
 }
 
 .dev-icons {
@@ -80,12 +80,11 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #147e00;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 800;
-  letter-spacing: 0.05rem;
+  font-weight: 120;
   text-transform: uppercase;
 }
 
@@ -106,8 +105,8 @@ p.lead {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 17rem;
-    height: 100vh;
+    width: 17%;
+    height: 100%;
   }
   #sideNav .navbar-brand {
     display: -webkit-box;
@@ -126,7 +125,7 @@ p.lead {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-    -ms-flex-align: start;
+    -ms-flex-align: start;  
     align-items: flex-start;
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
@@ -141,12 +140,6 @@ p.lead {
     flex-direction: column;
     width: 100%;
   }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
 }
 
 section.resume-section {
@@ -155,9 +148,6 @@ section.resume-section {
   max-width: 75rem;
 }
 
-section.resume-section .resume-item .resume-date {
-  min-width: none;
-}
 
 @media (min-width: 768px) {
   section.resume-section {
@@ -180,15 +170,15 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #147e00 !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #88ff85;
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: #88ff85;
 }
 
 @media (max-width: 991px) {
