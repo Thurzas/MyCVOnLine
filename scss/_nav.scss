@@ -11,6 +11,18 @@
   }
 }
 
+
+ [data-aos="AOS_rotate"] {
+   transform: rotate(360deg);
+   opacity: 0;
+   transition-property: transform, opacity;
+   &.aos-animate {
+     transform: rotate(0);
+     opacity: 1;
+   }
+ }
+
+
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;

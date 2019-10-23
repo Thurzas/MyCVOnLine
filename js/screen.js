@@ -21,7 +21,6 @@ var vp = new viewport();
 var Pressed=false;
 var isScreenFocused=false;
 
-
 function move(button){
   switch(button.id)
   {
@@ -349,7 +348,7 @@ function Game(){
         {
           this.GameCode="Snake";
         }
-        console.log("Pressed : "+Pressed);
+      //  console.log("Pressed : "+Pressed);
     }
     if(this.GameCode==="Snake")
     {
@@ -595,33 +594,24 @@ function drawScore(){
 
 function setupPage(){
 
-  console.log(vp.viewport[0]);
+  //console.log(vp.viewport[0]);
   canvas = document.getElementById("screen");
   canvasContext = canvas.getContext("2d");
-  console.log(canvas.parentNode);
+  //console.log(canvas.parentNode);
   var device= getUserAgent();
-  console.log(canvas);
+//  console.log(canvas);
 
   if(device==="smartphone")
   {
-    console.log("smartphone mode");
+    //console.log("smartphone mode");
     document.style="text-size-adjust:unset";
-    console.log(document);
+    //console.log(document);
     Smartphone=true;
     Small=true;
   }
   checkViewport();
   setGame();
   //TetrisGrid = new Screen(vp.viewport[0]-marginLeft-scoreGridX-1,Ysize,BOX,margin);
-
-}
-
-function ScrollMethod(){
-    if(document.getElementsByTagName("body")[0].classList.contains("stop-scrolling"))
-      document.getElementsByTagName("body")[0].classList.remove("stop-scrolling");
-
-    else
-      document.getElementsByTagName("body")[0].classList.add("stop-scrolling");
 
 }
 
@@ -632,7 +622,7 @@ function setGame()
   else
     canvas.width=canvas.parentNode.clientWidth;
 
-  console.log("canvas.width: "+canvas.width);
+  //console.log("canvas.width: "+canvas.width);
   canvas.height=Ysize+margin;
   g = new Game();
   gridWorld = new Screen(canvas.width-scoreGridX,Ysize,BOX,margin);

@@ -1,5 +1,11 @@
 body {
     padding-top: 54px;
+    background-image: url('../img/architecture-buildings-calm-1519088.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
 }
 
  .stop-scrolling {
@@ -125,7 +131,7 @@ p.lead {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-    -ms-flex-align: start;  
+    -ms-flex-align: start;
     align-items: flex-start;
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
@@ -143,6 +149,7 @@ p.lead {
 }
 
 section.resume-section {
+  background-color: rgba(255,255,255,.5);
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   max-width: 75rem;

@@ -10,14 +10,15 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="css/resume.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <script src="js/snake.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/Letter.js"></script>
   <script src="js/screen.js"></script>
 </head>
 
-<body id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+<body id="page-top" class="stop-scrolling" >
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" >
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">MIOT Mathieu</span>
       <span class="d-none d-lg-block">
@@ -53,7 +54,7 @@
 
   <div class="container-fluid p-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <section class="resume-section p-3 p-lg-5 d-flex d-column"  data-aos="fade-left" data-aos-mirror="true" id="about">
       <div class="my-auto">
         <h1 class="mb-0">MIOT
           <span class="text-primary">Mathieu</span>
@@ -61,19 +62,19 @@
         <div class="subheading mb-5">
           <a href="mailto:mathieu.miot@gmail.com">mathieu.miot@gmail.com</a>
         </div>
-        <p class="lead mb-5">Développeur Web débutant, ayant soif d'appendre et de progresser.
+        <p class="lead mb-5">Développeur Web.
           <div class="social-icons">
             <a href="#">
               <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://github.com/Thurzas">
-              <i class="fab fa-github"></i>
+              <i class="fab fa-github" id="trigger1"></i>
             </a>
           </div>
       </div>
     </section>
     <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column"  data-aos="fade-left" data-aos-mirror="true" id="education">
       <div class="my-auto">
         <h2 class="mb-5 text-primary">Mes études :</h2>
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -107,7 +108,7 @@
       </div>
     </section>
     <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="compétences">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column"  data-aos="fade-left" data-aos-mirror="true" id="compétences">
       <div class="my-auto">
         <h2 class="mb-5 text-primary">Mes compétences</h2>
         <div class="subheading mb-3">Langages de programmation &amp; outils</div>
@@ -140,7 +141,7 @@
       </div>
     </section>
     <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" data-aos="fade-left" data-aos-mirror="true" id="interests">
       <div class="my-auto">
         <h2 class="mb-5 text-primary">Des passions ?</h2>
         <p>Bien entendu, l'informatique me passionne (trop évident, je l'admet), mais sorti de l'électronique et de
@@ -150,7 +151,7 @@
       </div>
     </section>
     <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column"  data-aos="fade-left" data-aos-mirror="true" id="experience">
       <div class="my-auto">
         <h2 class="mb-5 text-primary">Expérience</h2>
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
@@ -178,15 +179,13 @@
       </div>
     </section>
     <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projets">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column"  data-aos="fade-left" data-aos-mirror="true" id="projets">
       <div class="my-auto">
         <h2 class="mb-5 text-primary">Mes projets</h2>
         <ul class="fa-ul mb-0">
           <li>
             <h3>snake en javascript:</h3>
-            <div class="subheading mb-3">cliquez sur l'écran de jeu pour vérouiller/déverouiller le scrolling.
-            </div>
-            <canvas id="screen" onclick="ScrollMethod()">
+            <canvas id="screen">
             </canvas>
             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
             <!-- Created with Inkscape (http://www.inkscape.org/) -->
@@ -234,6 +233,13 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/resume.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1200,
+    easing: 'ease-in-out-back'
+  });
+  </script>
 </body>
 
 </html>

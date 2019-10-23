@@ -42,3 +42,12 @@ function convert(grid1,grid2,X,Y,inv){
 
 	return inv==true ? new Coord(ratio*X,ratio*Y): new Coord(Math.floor(X/ratio),Math.floor(Y/ratio));
 };
+
+function ScrollMethod(){
+    if(document.getElementsByTagName("body")[0].classList.contains("stop-scrolling"))
+      document.getElementsByTagName("body")[0].classList.remove("stop-scrolling");
+
+    else
+      document.getElementsByTagName("body")[0].classList.add("stop-scrolling");
+
+}
