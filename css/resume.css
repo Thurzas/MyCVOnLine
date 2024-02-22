@@ -1,6 +1,5 @@
 body {
     padding-top: 54px;
-    background-image: url('http://thecampfiregrill.ca/wp-content/uploads/2016/12/toronto-cn-tower-illumination-ontario-calm-travel-attractions-canada.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -9,14 +8,15 @@ body {
 }
 
 #img{
-  background-image: url('http://thecampfiregrill.ca/wp-content/uploads/2016/12/toronto-cn-tower-illumination-ontario-calm-travel-attractions-canada.jpg');
+  background-image: url('../img/ComfyUI_temp_yonnx_00019_.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   height: 100%;
   position: fixed;
-  filter: grayscale(100%);
+  opacity: 0.6;
+  filter: grayscale(50%)!important;
   display: block;
   width: 100%;
   z-index: -10;
@@ -25,6 +25,7 @@ body {
    height: 100%;
    overflow: hidden;
  }
+
 
  #LEFT,#UP,#RIGHT,#DOWN
  {
